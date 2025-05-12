@@ -4,6 +4,7 @@ A modern, high-performance Next.js template with MDX support, based on the [Verc
 
 ## Improvements over the original template
 
+- Built-in Cursor Rules with rule to self-update
 - DRY code structure with centralized constants
 - Improved SEO with comprehensive metadata
 - Analytics support
@@ -27,7 +28,7 @@ A modern, high-performance Next.js template with MDX support, based on the [Verc
 
 ## Getting Started
 
-1. Clone this repository
+1. Run `npx create-next-app@latest --example "https://github.com/awantoch/next-mdx-template" project_name`
 2. Update the constants in `app/constants.ts` with your information
 3. Add your content to the journal section
 4. Customize the styling if desired

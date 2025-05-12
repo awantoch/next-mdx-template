@@ -14,7 +14,6 @@ export default async function sitemap() {
   let routes = [
     '',
     '/journal',
-    '/portfolio',
     '/rss',
     '/rss/feed.xml',
   ].map((route) => ({

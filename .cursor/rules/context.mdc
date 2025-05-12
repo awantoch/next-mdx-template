@@ -9,11 +9,18 @@ globs:
 alwaysApply: true
 ---
 
-## Tech  Stack
-- **Next.js 15+** (App Router, TypeScript)
-- **TailwindCSS** (fonts: Geist Sans/Mono)
+## Tech Stack
+- **Next.js 15+** (App Router, TypeScript)
+- **TailwindCSS** (fonts: Geist Sans/Mono)
 - **MDX** content
-- **Vercel** deploy w/ Analytics & Speed Insights
+- **Vercel** deploy w/ Analytics & Speed Insights
+- **pnpm** for faster package management
+
+## General rules
+- Practicality over purity always!
+- Make sure to think about the simplest way to write the code -- the best line of code is the one that doesn't need to be written!
+- Make sure to keep this Cursor Rules file updated when project level changes occur (such as dependencies, tech stack, etc), keep this self updated!
+- Read the codebase whenever you're not absolutely sure of the context -- if you are not sure just read the files
 
 ## Dependencies
 - Latest wherever possible
@@ -64,19 +71,19 @@ Please search the codebase as frequently as possible, especially if you don't ha
 - Functional components, explicit prop types
 - ESLint + Prettier enforced
 - Tailwind utility classes; `dark:` variants for dark mode
-- Mobile‑first responsive design
+- Mobile-first responsive design
 - Pure helpers, async/await, robust error handling
 - Meaningful names; keep components & functions small
 - Use semantic HTML, proper heading hierarchy & ARIA
 
 ## Performance & SEO
-- Next.js Image for assets, code‑splitting, caching headers
+- Next.js Image for assets, code-splitting, caching headers
 - Metadata (title, desc, OG) in `constants.ts`
 - robots.txt & sitemap.xml generated at build
-- Monitor Core Web Vitals via Vercel Analytics
+- Monitor Core Web Vitals via Vercel Analytics
 
 ## Accessibility & Testing
-- Ensure contrast, keyboard nav, screen‑reader labels
+- Ensure contrast, keyboard nav, screen-reader labels
 - Unit tests for components + a11y/SEO checks
 
 ## Git / CI / Security
@@ -86,11 +93,11 @@ Please search the codebase as frequently as possible, especially if you don't ha
 
 ## MDX Content
 - Front‑matter fields: `title`, `date`, `description`, `tags`.  
-- Display dates relatively (e.g. "3 days ago") but store ISO.
+- Display dates relatively (e.g. "3 days ago") but store ISO.
 
 ## Utilities
 - Date helpers with locale support
-- Re‑use typed nav items from `constants.ts`
+- Re-use typed nav items from `constants.ts`
 
 ## Vercel Cron Jobs (minimal rules)
 - Declare in `vercel.json`  
@@ -98,6 +105,6 @@ Please search the codebase as frequently as possible, especially if you don't ha
     "crons": [{ "path": "/api/cron", "schedule": "*/10 * * * *" }]
   }
 
-- Cron syntax (UTC): `MIN HOUR DOM MON DOW`, ranges `0‑59 0‑23 1‑31 1‑12 0‑6`, no named values, DOM & DOW can't both be set.
-- Invocation: Vercel issues HTTP GET to `path`, `User‑Agent: vercel-cron/1.0`
+- Cron syntax (UTC): `MIN HOUR DOM MON DOW`, ranges `0-59 0-23 1-31 1-12 0-6`, no named values, DOM & DOW can't both be set.
+- Invocation: Vercel issues HTTP GET to `path`, `User-Agent: vercel-cron/1.0`
 - Security (optional): set `CRON_SECRET`; Vercel adds `Authorization: Bearer <CRON_SECRET>`, verify in handler.
