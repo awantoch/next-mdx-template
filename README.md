@@ -34,6 +34,26 @@ A modern, high-performance Next.js template with MDX support, based on the [Verc
 4. Customize the styling if desired
 5. Deploy to your favorite platform
 
+## Analytics Configuration
+
+This template comes with built-in support for multiple analytics platforms:
+
+### Vercel Analytics
+Vercel Analytics is enabled by default and requires no additional configuration.
+
+### Google Analytics
+To enable Google Analytics:
+
+1. Create a Google Analytics 4 property and get your Measurement ID (starts with "G-")
+2. Add your Measurement ID to your environment variables:
+   ```bash
+   NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+   ```
+3. The analytics will be automatically loaded when the environment variable is present
+
+### Speed Insights
+Vercel Speed Insights is enabled by default and requires no additional configuration.
+
 ## License
 
 MIT

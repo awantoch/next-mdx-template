@@ -4,6 +4,7 @@ export const SITE_CONFIG = {
   locale: 'en_US',
   language: 'en',
   baseUrl: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || '',
 } as const
 
 export const METADATA_CONFIG = {
