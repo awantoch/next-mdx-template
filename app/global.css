@@ -1,0 +1,162 @@
+@import 'tailwindcss';
+
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
+:root {
+  /* Syntax highlighting colors */
+  --sh-class: #4c97f8;
+  --sh-identifier: white;
+  --sh-sign: #8996a3;
+  --sh-string: #0fa295;
+  --sh-keyword: #f47067;
+  --sh-comment: #a19595;
+  --sh-jsxliterals: #6266d1;
+  --sh-property: #e25a1c;
+  --sh-entity: #e25a1c;
+
+  /* Common colors */
+  --color-text: #ffffff;
+  --color-bg: #000000;
+  --color-border: #333333;
+  --color-muted: #999999;
+}
+
+html {
+  min-width: 360px;
+  color-scheme: dark;
+}
+
+/* Prose styles */
+.prose {
+  @apply max-w-none;
+}
+
+.prose .anchor {
+  @apply absolute invisible no-underline;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.prose .anchor:hover,
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose .anchor:after {
+  @apply text-neutral-300;
+  content: '#';
+}
+
+.prose a {
+  @apply underline transition-all decoration-neutral-600 underline-offset-2 decoration-[0.1em] hover:opacity-80;
+}
+
+.prose pre {
+  @apply bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-800 py-2 px-3 text-sm;
+}
+
+.prose code {
+  @apply px-1 py-0.5 rounded-lg bg-neutral-800;
+}
+
+.prose pre code {
+  @apply p-0 bg-transparent;
+  border: initial;
+  line-height: 1.5;
+}
+
+.prose code span {
+  @apply font-medium;
+}
+
+.prose img {
+  @apply m-0;
+}
+
+.prose p {
+  @apply my-4 text-neutral-200;
+}
+
+.prose h1 {
+  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose h2 {
+  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose h3 {
+  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose h4 {
+  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+}
+
+.prose strong {
+  @apply font-medium;
+}
+
+.prose ul {
+  @apply list-disc pl-6;
+}
+
+.prose ol {
+  @apply list-decimal pl-6;
+}
+
+.prose > :first-child {
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+/* Scrollbar styles */
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Form styles */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Table styles */
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Utility classes */
+.title {
+  text-wrap: balance;
+}
+
+/* Transitions */
+.transition-opacity {
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Common link styles */
+.link {
+  @apply underline text-neutral-300 hover:opacity-80 transition-opacity;
+}
+
+.bg-custom-gradient {
+  background: radial-gradient(ellipse at 60% 0%, #20132b 0%, #120c18 100%);
+}
